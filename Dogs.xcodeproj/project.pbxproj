@@ -104,8 +104,8 @@
 				2F8D78321E25246C00D75E6A /* Main.storyboard */,
 				2F8D78381E25246D00D75E6A /* Assets.xcassets */,
 				2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */,
-				2F8D783D1E25246D00D75E6A /* Info.plist */,
 				2F8D78351E25246D00D75E6A /* Dogs.xcdatamodeld */,
+				2F8D783D1E25246D00D75E6A /* Info.plist */,
 			);
 			path = Dogs;
 			sourceTree = "<group>";
@@ -509,6 +509,7 @@
 				2F8D78581E25246D00D75E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F8D78591E25246D00D75E6A /* Build configuration list for PBXNativeTarget "DogsTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +518,7 @@
 				2F8D785B1E25246D00D75E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F8D785C1E25246D00D75E6A /* Build configuration list for PBXNativeTarget "DogsUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +527,7 @@
 				2F8D785E1E25246D00D75E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
