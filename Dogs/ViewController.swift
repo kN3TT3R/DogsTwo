@@ -1,6 +1,7 @@
 //
 //  ViewController.swift
 //  Dogs
+//  Version 1.2
 //
 //  Created by Kenneth Debruyn on 10/01/17.
 //  Copyright © 2017 kN3TT3R. All rights reserved.
@@ -12,23 +13,15 @@ class ViewController: UIViewController {
     
     
     // MARK: - Global properties
-    let dogNameArray = ["Chuck", "Wobbes", "Wimpie", "Happy"]
-    //let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
+    let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
     
-    
-    // Version 1.2 Beta
-    let dogImageArray = [("Chuck", #imageLiteral(resourceName: "Chuck")),
-                         ("Wobbes", #imageLiteral(resourceName: "Happy")),
-                         ("Wimpie",#imageLiteral(resourceName: "Wobbes")),
-                         ("Happy", #imageLiteral(resourceName: "Wimpie"))]
-    
-    let dogDescriptionText = " , lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    /*
-     "Ik ben dog.name. Ik kom uit dog.location. Net zoals mijn moeder ben ik een dog.race. Ik ben nu dog.age jaar oud."
-     */
-    
-    
-    
+// Version 1.2 Beta
+    let dogInfoArray = [ (name: "Chuck", birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
+                         (name: "Wobbes", birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
+                         (name: "Wimpie", birthPlace: "Leuven", breed: "Labrador", age: 2),
+                         (name: "Happy", birthPlace: "Brugge", breed: "Golden Retriever", age: 8)]
+// End Version 1.2 Beta
+
     var dog = Dog()
     var dogCounter = 0
     
@@ -37,10 +30,16 @@ class ViewController: UIViewController {
     /// Structure Dog
     /// properties
     ///     - name: the name of the dog
+    ///     - birthPlace: the birthplace of the dog
+    ///     - breed: the breed of the dog
     ///     - description: the description of the dog
+    ///     - age: the age of the dog
     ///     - image: the image for the dog
     struct Dog {
         var name = ""
+        var birthPlace = ""
+        var breed = ""
+        var age = 0
         var description = ""
         var image = UIImage()
     }
@@ -57,6 +56,10 @@ class ViewController: UIViewController {
         loadNextDog()
     }
     
+    @IBAction func displayPreviousDog(_ sender: UIButton) {
+        loadPreviousDog()
+    }
+    
     
     // MARK: - Overridden Functions
     override func viewDidLoad() {
@@ -69,25 +72,56 @@ class ViewController: UIViewController {
     
     
     // MARK: - Homemade Functions
-    
     /// Function which will:
     ///     -> create a new instance of Dog
-    ///     -> add a name, description and image to the dog
-    ///     -> load the dog to the view
-    ///     -> checks on 'index out of bound'
+    ///     -> add a name, description and image to the dog based on the Tuple
+    ///     -> call updateView to update the info to the view
     func loadNextDog() {
+        
+        // checks on 'index out of bound'
         if dogCounter == dogImageArray.count {
             dogCounter = 0
         }
-        dog.name = dogNameArray[dogCounter]
-        dog.description = dog.name + dogDescriptionText
+        
+// Version 1.2 Beta
+        let dogInfoTuple = dogInfoArray[dogCounter]
+        dog.name = dogInfoTuple.name
+        dog.birthPlace = dogInfoTuple.birthPlace
+        dog.breed = dogInfoTuple.breed
+        dog.age = dogInfoTuple.age
+        dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
+// End Version 1.2 Beta
         
         updateView()
-        
+    
         dogCounter += 1
     }
     
+// Version 1.2 Beta
+    /// Function which will:
+    ///     -> create a new instance of Dog
+    ///     -> add a name, description and image to the dog based on the Tuple
+    ///     -> call updateView to update the info to the view
+    func loadPreviousDog() {
+        // checks on 'index out of bound'
+        if dogCounter == 0 {
+            dogCounter = dogImageArray.count
+        }
+        
+        dogCounter -= 1
+    
+        let dogInfoTuple = dogInfoArray[dogCounter]
+        dog.name = dogInfoTuple.name
+        dog.birthPlace = dogInfoTuple.birthPlace
+        dog.breed = dogInfoTuple.breed
+        dog.age = dogInfoTuple.age
+        dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
+        dog.image = dogImageArray[dogCounter]
+        
+        updateView()
+            }
+// End Version 1.2 Beta
     
     /// Function which will update the view based on a specific instance of Dog
     func updateView() {
