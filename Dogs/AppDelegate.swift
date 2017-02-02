@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DogsDictionary
+//  Dogs
 //  Version 1.3
 //
 //  Created by Kenneth Debruyn on 10/01/17.

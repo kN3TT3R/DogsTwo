@@ -79,6 +79,7 @@
 				2F8D782C1E25246C00D75E6A /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		2F8D782C1E25246C00D75E6A /* Products */ = {
 			isa = PBXGroup;
@@ -417,12 +418,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DogsDictionaryTests/Info.plist;
+				INFOPLIST_FILE = DogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.kn3tt3r.projects.DogsDictionaryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.kn3tt3r.projects.DogsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dogs.app/Dogs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dogs.temp_caseinsensitive_rename.app/Dogs.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -431,12 +432,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DogsDictionaryTests/Info.plist;
+				INFOPLIST_FILE = DogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.kn3tt3r.projects.DogsDictionaryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.kn3tt3r.projects.DogsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dogs.app/Dogs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dogs.temp_caseinsensitive_rename.app/Dogs.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
