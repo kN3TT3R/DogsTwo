@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
-//  Dogs
-//  Version 1.2
+//  DogsDictionary
+//  Version 1.3
 //
 //  Created by Kenneth Debruyn on 10/01/17.
 //  Copyright © 2017 kN3TT3R. All rights reserved.
