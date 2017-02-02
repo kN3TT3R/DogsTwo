@@ -41,6 +41,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdR-iV-L8l">
                                 <rect key="frame" x="0.0" y="20" width="200" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="0ON-9s-vYJ"/>
                                     <constraint firstAttribute="width" constant="200" id="9kL-ml-gcX"/>
@@ -49,7 +50,7 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-6e-aS8">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-6e-aS8">
                                 <rect key="frame" x="113.5" y="229" width="455" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -76,9 +77,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dogDescription" destination="ZIP-6e-aS8" id="48q-gZ-a7K"/>
-                        <outlet property="dogImage" destination="9XB-ME-jD1" id="nlJ-2S-oJD"/>
-                        <outlet property="dogName" destination="OdR-iV-L8l" id="PKc-pd-HK8"/>
+                        <outlet property="dogDescriptionView" destination="ZIP-6e-aS8" id="X71-Ko-GAP"/>
+                        <outlet property="dogImageView" destination="9XB-ME-jD1" id="323-lQ-1Te"/>
+                        <outlet property="dogNameLabel" destination="OdR-iV-L8l" id="Ug5-gP-b1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
