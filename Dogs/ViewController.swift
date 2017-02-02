@@ -1,7 +1,8 @@
 //
 //  ViewController.swift
-//  DogsDictionary
-//  Version 1.3
+//  Dogs
+//  Version 1.2 - Tuples
+//  Version 1.3 - Dictionary
 //
 //  Created by Kenneth Debruyn on 10/01/17.
 //  Copyright © 2017 kN3TT3R. All rights reserved.
@@ -15,11 +16,24 @@ class ViewController: UIViewController {
     // MARK: - Global properties
     let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
     
-    let dogInfoArray = [ (name: "Chuck", birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
-                         (name: "Wobbes", birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
-                         (name: "Wimpie", birthPlace: "Leuven", breed: "Labrador", age: 2),
-                         (name: "Happy", birthPlace: "Brugge", breed: "Golden Retriever", age: 8)]
-
+    // Version 1.2
+    //    let dogInfoArray = [ (name: "Chuck", birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
+    //                         (name: "Wobbes", birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
+    //                         (name: "Wimpie", birthPlace: "Leuven", breed: "Labrador", age: 2),
+    //                         (name: "Happy", birthPlace: "Brugge", breed: "Golden Retriever", age: 8)]
+    
+    // Version 1.3
+    /// dogInfoDictionary: a Dictionary
+    ///     - key is the name of the dog
+    ///     - value is a Tuple containing (birthplace, breed, age)
+    let dogInfoDictionary = [
+        "Chuck": (birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
+        "Wobbes": (birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
+        "Wimpie": (birthPlace: "Leuven", breed: "Labrador", age: 2),
+        "Happy": (birthPlace: "Brugge", breed: "Golden Retriever", age: 8)
+    ]
+    let dogNames = ["Chuck", "Wobbes", "Wimpie", "Happy"]
+    
     var dog = Dog()
     var dogCounter = 0
     
@@ -81,16 +95,27 @@ class ViewController: UIViewController {
             dogCounter = 0
         }
         
-        let dogInfoTuple = dogInfoArray[dogCounter]
-        dog.name = dogInfoTuple.name
-        dog.birthPlace = dogInfoTuple.birthPlace
-        dog.breed = dogInfoTuple.breed
-        dog.age = dogInfoTuple.age
+        // Version 1.2
+        //        let dogInfoTuple = dogInfoDictionary[dogCounter]
+        //        dog.name = dogInfoTuple.name
+        //        dog.birthPlace = dogInfoTuple.birthPlace
+        //        dog.breed = dogInfoTuple.breed
+        //        dog.age = dogInfoTuple.age
+        //        dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \   (dog.age) jaar oud."
+        
+        
+        // Version 1.3
+        let dogName = dogNames[dogCounter]
+        let dogInfoTuple = dogInfoDictionary[dogName]
+        dog.name = dogName
+        dog.birthPlace = dogInfoTuple!.birthPlace
+        dog.breed = dogInfoTuple!.breed
+        dog.age = dogInfoTuple!.age
         dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
         
         updateView()
-    
+        
         dogCounter += 1
     }
     
@@ -105,12 +130,21 @@ class ViewController: UIViewController {
         }
         
         dogCounter -= 1
-    
-        let dogInfoTuple = dogInfoArray[dogCounter]
-        dog.name = dogInfoTuple.name
-        dog.birthPlace = dogInfoTuple.birthPlace
-        dog.breed = dogInfoTuple.breed
-        dog.age = dogInfoTuple.age
+        
+        // Version 1.2
+        //        let dogInfoTuple = dogInfoDictionary[dogCounter]
+        //        dog.name = dogInfoTuple.name
+        //        dog.birthPlace = dogInfoTuple.birthPlace
+        //        dog.breed = dogInfoTuple.breed
+        //        dog.age = dogInfoTuple.age
+        
+        // Version 1.3
+        let dogName = dogNames[dogCounter]
+        let dogInfoTuple = dogInfoDictionary[dogName]
+        dog.name = dogName
+        dog.birthPlace = dogInfoTuple!.birthPlace
+        dog.breed = dogInfoTuple!.breed
+        dog.age = dogInfoTuple!.age
         dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
         
