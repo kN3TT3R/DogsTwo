@@ -15,12 +15,10 @@ class ViewController: UIViewController {
     // MARK: - Global properties
     let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
     
-// Version 1.2 Beta
     let dogInfoArray = [ (name: "Chuck", birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
                          (name: "Wobbes", birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
                          (name: "Wimpie", birthPlace: "Leuven", breed: "Labrador", age: 2),
                          (name: "Happy", birthPlace: "Brugge", breed: "Golden Retriever", age: 8)]
-// End Version 1.2 Beta
 
     var dog = Dog()
     var dogCounter = 0
@@ -83,7 +81,6 @@ class ViewController: UIViewController {
             dogCounter = 0
         }
         
-// Version 1.2 Beta
         let dogInfoTuple = dogInfoArray[dogCounter]
         dog.name = dogInfoTuple.name
         dog.birthPlace = dogInfoTuple.birthPlace
@@ -91,14 +88,12 @@ class ViewController: UIViewController {
         dog.age = dogInfoTuple.age
         dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
-// End Version 1.2 Beta
         
         updateView()
     
         dogCounter += 1
     }
     
-// Version 1.2 Beta
     /// Function which will:
     ///     -> create a new instance of Dog
     ///     -> add a name, description and image to the dog based on the Tuple
@@ -120,8 +115,7 @@ class ViewController: UIViewController {
         dog.image = dogImageArray[dogCounter]
         
         updateView()
-            }
-// End Version 1.2 Beta
+    }
     
     /// Function which will update the view based on a specific instance of Dog
     func updateView() {
