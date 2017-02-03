@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,16 +38,6 @@
                                     <action selector="displayNextDog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y0p-pJ-NIr"/>
                                 </connections>
                             </button>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-6e-aS8">
-                                <rect key="frame" x="64" y="477" width="256" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fjI-Xn-vcB"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjn-Us-qdb">
                                 <rect key="frame" x="0.0" y="527" width="120" height="41"/>
                                 <constraints>
@@ -77,11 +66,8 @@
                         <color key="backgroundColor" red="0.82890624999999996" green="0.82890624999999996" blue="0.82890624999999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9XB-ME-jD1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4zF-sh-bE7"/>
-                            <constraint firstAttribute="trailing" secondItem="ZIP-6e-aS8" secondAttribute="trailing" id="9ua-0d-qxs"/>
                             <constraint firstItem="OdR-iV-L8l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="ACs-Li-tcN"/>
-                            <constraint firstItem="ZIP-6e-aS8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="4:5" id="Ab1-jL-N4e"/>
                             <constraint firstAttribute="trailing" secondItem="9XB-ME-jD1" secondAttribute="trailing" id="Bea-s9-4et"/>
-                            <constraint firstItem="o0d-kU-5j1" firstAttribute="top" secondItem="ZIP-6e-aS8" secondAttribute="bottom" id="CBw-UN-bDa"/>
                             <constraint firstItem="9XB-ME-jD1" firstAttribute="top" secondItem="OdR-iV-L8l" secondAttribute="top" id="Foc-Rp-vh1"/>
                             <constraint firstItem="OdR-iV-L8l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hxg-hj-iUX"/>
                             <constraint firstItem="o0d-kU-5j1" firstAttribute="top" secondItem="9XB-ME-jD1" secondAttribute="bottom" id="Kvz-Nu-txL"/>
@@ -99,7 +85,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dogDescriptionView" destination="ZIP-6e-aS8" id="X71-Ko-GAP"/>
                         <outlet property="dogImageView" destination="9XB-ME-jD1" id="323-lQ-1Te"/>
                         <outlet property="dogNameLabel" destination="OdR-iV-L8l" id="Ug5-gP-b1l"/>
                     </connections>

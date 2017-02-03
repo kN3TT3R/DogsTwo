@@ -60,7 +60,6 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var dogNameLabel: UILabel!
     @IBOutlet weak var dogImageView: UIImageView!
-    @IBOutlet weak var dogDescriptionView: UITextView!
     
     
     // MARK: - IBAction
@@ -80,6 +79,9 @@ class ViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
     
@@ -140,12 +142,7 @@ class ViewController: UIViewController {
         
         // Version 1.3
         let dogName = dogNames[dogCounter]
-        let dogInfoTuple = dogInfoDictionary[dogName]
         dog.name = dogName
-        dog.birthPlace = dogInfoTuple!.birthPlace
-        dog.breed = dogInfoTuple!.breed
-        dog.age = dogInfoTuple!.age
-        dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
         
         updateView()
@@ -155,7 +152,6 @@ class ViewController: UIViewController {
     func updateView() {
         dogNameLabel.text = dog.name
         dogImageView.image = dog.image
-        dogDescriptionView.text = dog.description
     }
 }
 
