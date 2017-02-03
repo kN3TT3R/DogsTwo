@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */; };
 		2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D782E1E25246C00D75E6A /* AppDelegate.swift */; };
 		2F8D78311E25246C00D75E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D78301E25246C00D75E6A /* ViewController.swift */; };
 		2F8D78341E25246C00D75E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D78321E25246C00D75E6A /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimalViewController.swift; path = ../AnimalViewController.swift; sourceTree = "<group>"; };
 		2F8D782B1E25246C00D75E6A /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8D782E1E25246C00D75E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F8D78301E25246C00D75E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F207F7B1E4488F90012C9B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F8D783D1E25246D00D75E6A /* Info.plist */,
+				2F8D782E1E25246C00D75E6A /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2F8D78221E25246C00D75E6A = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +105,13 @@
 		2F8D782D1E25246C00D75E6A /* Dogs */ = {
 			isa = PBXGroup;
 			children = (
-				2F8D782E1E25246C00D75E6A /* AppDelegate.swift */,
+				2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */,
 				2F8D78301E25246C00D75E6A /* ViewController.swift */,
 				2F8D78321E25246C00D75E6A /* Main.storyboard */,
 				2F8D78381E25246D00D75E6A /* Assets.xcassets */,
 				2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */,
 				2F8D78351E25246D00D75E6A /* Dogs.xcdatamodeld */,
-				2F8D783D1E25246D00D75E6A /* Info.plist */,
+				2F207F7B1E4488F90012C9B9 /* Supporting Files */,
 			);
 			path = Dogs;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 			files = (
 				2F8D78311E25246C00D75E6A /* ViewController.swift in Sources */,
 				2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */,
+				2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */,
 				2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
