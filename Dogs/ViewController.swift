@@ -68,6 +68,7 @@ class ViewController: UIViewController {
             destinationVC.dog.name = self.dog.name
             destinationVC.dog.age = self.dog.age
             destinationVC.dog.breed = self.dog.breed
+            destinationVC.dog.birthPlace = self.dog.birthPlace
             destinationVC.dog.image = self.dog.image
         }
     }
@@ -85,8 +86,6 @@ class ViewController: UIViewController {
         dog.birthPlace = dogInfoTuple!.birthPlace
         dog.breed = dogInfoTuple!.breed
         dog.age = dogInfoTuple!.age
-        dog.description = "Ik ben \(dog.name). Ik kom uit \(dog.birthPlace). " +
-            "Net zoals mijn moeder ben ik een \(dog.breed). Ik ben nu \(dog.age) jaar oud."
         dog.image = dogImageArray[dogCounter]
         
         updateView()
@@ -102,7 +101,11 @@ class ViewController: UIViewController {
         dogCounter -= 1
 
         let dogName = dogNames[dogCounter]
+        let dogInfoTuple = dogInfoDictionary[dogName]
         dog.name = dogName
+        dog.birthPlace = dogInfoTuple!.birthPlace
+        dog.breed = dogInfoTuple!.breed
+        dog.age = dogInfoTuple!.age
         dog.image = dogImageArray[dogCounter]
         
         updateView()

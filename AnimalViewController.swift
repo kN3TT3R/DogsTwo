@@ -12,9 +12,9 @@ class AnimalViewController: UIViewController {
 
     
     // MARK: - IBOutlets
-    @IBOutlet weak var animalNameLabel: UILabel!
     @IBOutlet weak var animalAgeLabel: UILabel!
     @IBOutlet weak var animalBreedLabel: UILabel!
+    @IBOutlet weak var animalBirthplaceLabel: UILabel!
     @IBOutlet weak var animalImageView: UIImageView!
     
     
@@ -37,9 +37,10 @@ class AnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.animalNameLabel.text = dog.name
+        self.navigationItem.title = dog.name
         self.animalAgeLabel.text = "\(dog.age) years"
         self.animalBreedLabel.text = dog.breed
+        self.animalBirthplaceLabel.text = dog.birthPlace
         self.animalImageView.image = dog.image
     }
     
