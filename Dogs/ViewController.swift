@@ -17,8 +17,6 @@ class ViewController: UIViewController {
     
     
     // MARK: - Global Properties
-    
-
     let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
     var dog = Animal()
     var dogArray = AnimalCollection()
