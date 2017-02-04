@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var dogNameLabel: UILabel!
     @IBOutlet weak var dogImageView: UIImageView!
+    @IBOutlet weak var selectionBar: UISegmentedControl!
     
     
     // MARK: - Global Properties
@@ -31,6 +32,13 @@ class ViewController: UIViewController {
     
     @IBAction func displayPreviousDog(_ sender: UIButton) {
         loadPreviousDog()
+    }
+    
+    @IBAction func selectSpecificDog(_ sender: UISegmentedControl) {
+        dogCounter = sender.selectedSegmentIndex
+        dog = dogArray.collection[dogCounter]
+        image = dogImageArray[dogCounter]
+        updateView()
     }
     
     
@@ -63,6 +71,7 @@ class ViewController: UIViewController {
         
         dog = dogArray.collection[dogCounter]
         image = dogImageArray[dogCounter]
+        selectionBar.selectedSegmentIndex = dogCounter
         
         updateView()
         
@@ -78,6 +87,7 @@ class ViewController: UIViewController {
         
         dog = dogArray.collection[dogCounter]
         image = dogImageArray[dogCounter]
+        selectionBar.selectedSegmentIndex = dogCounter
         
         updateView()
     }
