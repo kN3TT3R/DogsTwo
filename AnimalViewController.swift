@@ -16,21 +16,11 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var animalBreedLabel: UILabel!
     @IBOutlet weak var animalBirthplaceLabel: UILabel!
     @IBOutlet weak var animalImageView: UIImageView!
-    
-    
-    // MARK: - Structure
-    struct Dog {
-        var name = ""
-        var birthPlace = ""
-        var breed = ""
-        var age = 0
-        var description = ""
-        var image = UIImage()
-    }
 
     
     // MARK: - Global Properties
-    var dog = Dog()
+    var dog = Animal()
+    var image = UIImage()
     
     
     //  MARK: - Overridden Functions
@@ -41,7 +31,7 @@ class AnimalViewController: UIViewController {
         self.animalAgeLabel.text = "\(dog.age) years"
         self.animalBreedLabel.text = dog.breed
         self.animalBirthplaceLabel.text = dog.birthPlace
-        self.animalImageView.image = dog.image
+        self.animalImageView.image = image
     }
     
     override func didReceiveMemoryWarning() {

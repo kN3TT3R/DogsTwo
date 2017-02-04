@@ -16,27 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var dogImageView: UIImageView!
     
     
-    // MARK: - Structure
-    struct Dog {
-        var name = ""
-        var birthPlace = ""
-        var breed = ""
-        var age = 0
-        var description = ""
-        var image = UIImage()
-    }
-    
-    
     // MARK: - Global Properties
-    let dogInfoDictionary = [
-        "Chuck": (birthPlace: "Torhout", breed: "Berner-Sennen", age: 6),
-        "Wobbes": (birthPlace: "Werchter", breed: "Jack-Russell", age: 4),
-        "Wimpie": (birthPlace: "Leuven", breed: "Labrador", age: 2),
-        "Happy": (birthPlace: "Brugge", breed: "Golden Retriever", age: 8)
-    ]
-    let dogNames = ["Chuck", "Wobbes", "Wimpie", "Happy"]
+    let dogArray = [Animal(name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1"),
+                    Animal(name: "Wobbes", birthPlace: "Place 2", breed: "Breed 2", age: 4, description: "Description 2"),
+                    Animal(name: "Wimpie", birthPlace: "Place 3", breed: "Breed 3", age: 6, description: "Description 3"),
+                    Animal(name: "Happy", birthPlace: "Place 4", breed: "Breed 4", age: 8, description: "Description 4")]
+
     let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
-    var dog = Dog()
+    var dog = Animal()
+    var image = UIImage()
     var dogCounter = 0
     
     
@@ -65,11 +53,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDogDetail" {
             let destinationVC = segue.destination as! AnimalViewController
-            destinationVC.dog.name = self.dog.name
-            destinationVC.dog.age = self.dog.age
-            destinationVC.dog.breed = self.dog.breed
-            destinationVC.dog.birthPlace = self.dog.birthPlace
-            destinationVC.dog.image = self.dog.image
+            destinationVC.dog = self.dog
+            destinationVC.image = image
         }
     }
     
@@ -79,14 +64,9 @@ class ViewController: UIViewController {
         if dogCounter == dogImageArray.count {
             dogCounter = 0
         }
-
-        let dogName = dogNames[dogCounter]
-        let dogInfoTuple = dogInfoDictionary[dogName]
-        dog.name = dogName
-        dog.birthPlace = dogInfoTuple!.birthPlace
-        dog.breed = dogInfoTuple!.breed
-        dog.age = dogInfoTuple!.age
-        dog.image = dogImageArray[dogCounter]
+        
+        dog = dogArray[dogCounter]
+        image = dogImageArray[dogCounter]
         
         updateView()
         
@@ -99,29 +79,18 @@ class ViewController: UIViewController {
         }
         
         dogCounter -= 1
-
-        let dogName = dogNames[dogCounter]
-        let dogInfoTuple = dogInfoDictionary[dogName]
-        dog.name = dogName
-        dog.birthPlace = dogInfoTuple!.birthPlace
-        dog.breed = dogInfoTuple!.breed
-        dog.age = dogInfoTuple!.age
-        dog.image = dogImageArray[dogCounter]
+        
+        dog = dogArray[dogCounter]
+        image = dogImageArray[dogCounter]
         
         updateView()
     }
     
     func updateView() {
         dogNameLabel.text = dog.name
-        dogImageView.image = dog.image
+        dogImageView.image = image
     }
 }
-
-
-
-
-
-
 
 
 

@@ -16,6 +16,7 @@
 		2F8D783C1E25246D00D75E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
 		2FCB780B1E437DE200F55503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
 		2FCB780C1E437DE300F55503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
+		4FE638161E454D7200CC3215 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE638151E454D7200CC3215 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2F8D783D1E25246D00D75E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8D78421E25246D00D75E6A /* DogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8D784D1E25246D00D75E6A /* DogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE638151E454D7200CC3215 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		2F8D782D1E25246C00D75E6A /* Dogs */ = {
 			isa = PBXGroup;
 			children = (
+				4FE638151E454D7200CC3215 /* Animal.swift */,
 				2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */,
 				2F8D78301E25246C00D75E6A /* ViewController.swift */,
 				2F8D78321E25246C00D75E6A /* Main.storyboard */,
@@ -256,6 +259,7 @@
 				2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */,
 				2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */,
 				2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */,
+				4FE638161E454D7200CC3215 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
