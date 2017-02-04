@@ -10,10 +10,10 @@ import Foundation
 
 struct AnimalCollection {
     let collection = [
-            Animal(name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1"),
-            Animal(name: "Wobbes", birthPlace: "Place 2", breed: "Breed 2", age: 4, description: "Description 2"),
-            Animal(name: "Wimpie", birthPlace: "Place 3", breed: "Breed 3", age: 6, description: "Description 3"),
-            Animal(name: "Happy", birthPlace: "Place 4", breed: "Breed 4", age: 8, description: "Description 4")
+        Animal(animalID: 0, name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1"),
+        Animal(animalID: 1, name: "Wobbes", birthPlace: "Place 2", breed: "Breed 2", age: 4, description: "Description 2"),
+        Animal(animalID: 2, name: "Wimpie", birthPlace: "Place 3", breed: "Breed 3", age: 6, description: "Description 3"),
+        Animal(animalID: 3, name: "Happy", birthPlace: "Place 4", breed: "Breed 4", age: 8, description: "Description 4")
     ]
     
     func getAnimal(with dogID: Int) -> Animal {

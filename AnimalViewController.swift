@@ -20,7 +20,7 @@ class AnimalViewController: UIViewController {
     
     // MARK: - Global Properties
     var currentDog = Animal()
-    var image = UIImage()
+    var currentDogImage = UIImage()
     
     
     //  MARK: - Overridden Functions
@@ -31,7 +31,7 @@ class AnimalViewController: UIViewController {
         self.animalAgeLabel.text = "\(currentDog.age) years"
         self.animalBreedLabel.text = currentDog.breed
         self.animalBirthplaceLabel.text = currentDog.birthPlace
-        self.animalImageView.image = image
+        self.animalImageView.image = currentDogImage
     }
     
     override func didReceiveMemoryWarning() {

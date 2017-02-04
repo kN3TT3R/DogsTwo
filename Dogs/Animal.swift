@@ -9,12 +9,15 @@
 import Foundation
 import UIKit
 
-
-// MARK: - Structure
 struct Animal {
+    var animalID: Int?
     var name = String()
     var birthPlace = String()
     var breed = String()
     var age = 0
     var description = String()
+    
+    func getAnimalID(for: Animal) -> Int {
+        return self.animalID!
+    }
 }

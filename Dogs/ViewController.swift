@@ -18,15 +18,13 @@ class ViewController: UIViewController {
     
     
     // MARK: - Global Properties
-    let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
-    var dogImage = UIImage()
-    var dogImageCollection = ImageCollection()
-    
-    var currentDog = Animal()
-    var dogCollection = AnimalCollection()
-    
     var dogID = 0
+    var currentDog = Animal()
+    var currentDogImage = UIImage()
     
+    var dogImageCollection = ImageCollection()
+    var dogCollection = AnimalCollection()
+
     
     // MARK: - IBAction
     @IBAction func displayNextDog(_ sender: UIButton) {
@@ -40,7 +38,7 @@ class ViewController: UIViewController {
     @IBAction func selectSpecificDog(_ sender: UISegmentedControl) {
         dogID = sender.selectedSegmentIndex
         currentDog = dogCollection.getAnimal(with: dogID)
-        dogImage = dogImageCollection.getImage(with: dogID)
+        currentDogImage = dogImageCollection.getImage(with: dogID)
         updateView()
     }
     
@@ -49,6 +47,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNextDog()
+        print(dogImageCollection.collection.count)
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,19 +60,19 @@ class ViewController: UIViewController {
         if segue.identifier == "showDogDetail" {
             let destinationVC = segue.destination as! AnimalViewController
             destinationVC.currentDog = self.currentDog
-            destinationVC.image = dogImage
+            destinationVC.currentDogImage = currentDogImage
         }
     }
     
     
     // MARK: - Homemade Functions
     func loadNextDog() {
-        if dogID == dogImageArray.count {
+        if dogID == dogImageCollection.collection.count {
             dogID = 0
         }
         
         currentDog = dogCollection.getAnimal(with: dogID)
-        dogImage = dogImageCollection.getImage(with: dogID)
+        currentDogImage = dogImageCollection.getImage(with: dogID)
         selectionBar.selectedSegmentIndex = dogID
         
         updateView()
@@ -83,13 +82,13 @@ class ViewController: UIViewController {
     
     func loadPreviousDog() {
         if dogID == 0 {
-            dogID = dogImageArray.count
+            dogID = dogImageCollection.collection.count
         }
         
         dogID -= 1
         
         currentDog = dogCollection.getAnimal(with: dogID)
-        dogImage = dogImageCollection.getImage(with: dogID)
+        currentDogImage = dogImageCollection.getImage(with: dogID)
         selectionBar.selectedSegmentIndex = dogID
         
         updateView()
@@ -97,7 +96,7 @@ class ViewController: UIViewController {
     
     func updateView() {
         dogNameLabel.text = currentDog.name
-        dogImageView.image = dogImage
+        dogImageView.image = currentDogImage
     }
 }
 
