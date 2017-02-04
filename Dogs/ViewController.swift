@@ -46,8 +46,9 @@ class ViewController: UIViewController {
     // MARK: - Overridden Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNextDog()
-        print(dogImageCollection.collection.count)
+        currentDog = Animal(animalID: 0, name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1")
+        currentDogImage = #imageLiteral(resourceName: "Chuck")
+        updateView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,30 +68,16 @@ class ViewController: UIViewController {
     
     // MARK: - Homemade Functions
     func loadNextDog() {
-        if dogID == dogImageCollection.collection.count {
-            dogID = 0
-        }
-        
-        currentDog = dogCollection.getAnimal(with: dogID)
-        currentDogImage = dogImageCollection.getImage(with: dogID)
-        selectionBar.selectedSegmentIndex = dogID
-        
+        currentDog = dogCollection.getNextAnimal(for: currentDog.animalID!)
+        currentDogImage = dogImageCollection.getImage(with: currentDog.animalID!)
+        selectionBar.selectedSegmentIndex = currentDog.animalID!
         updateView()
-        
-        dogID += 1
     }
     
     func loadPreviousDog() {
-        if dogID == 0 {
-            dogID = dogImageCollection.collection.count
-        }
-        
-        dogID -= 1
-        
-        currentDog = dogCollection.getAnimal(with: dogID)
-        currentDogImage = dogImageCollection.getImage(with: dogID)
-        selectionBar.selectedSegmentIndex = dogID
-        
+        currentDog = dogCollection.getPreviousAnimal(for: currentDog.animalID!)
+        currentDogImage = dogImageCollection.getImage(with: currentDog.animalID!)
+        selectionBar.selectedSegmentIndex = currentDog.animalID!
         updateView()
     }
     
