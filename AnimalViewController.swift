@@ -19,7 +19,7 @@ class AnimalViewController: UIViewController {
 
     
     // MARK: - Global Properties
-    var dog = Animal()
+    var currentDog = Animal()
     var image = UIImage()
     
     
@@ -27,10 +27,10 @@ class AnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = dog.name
-        self.animalAgeLabel.text = "\(dog.age) years"
-        self.animalBreedLabel.text = dog.breed
-        self.animalBirthplaceLabel.text = dog.birthPlace
+        self.navigationItem.title = currentDog.name
+        self.animalAgeLabel.text = "\(currentDog.age) years"
+        self.animalBreedLabel.text = currentDog.breed
+        self.animalBirthplaceLabel.text = currentDog.birthPlace
         self.animalImageView.image = image
     }
     

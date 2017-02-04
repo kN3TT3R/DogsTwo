@@ -15,4 +15,8 @@ struct AnimalCollection {
             Animal(name: "Wimpie", birthPlace: "Place 3", breed: "Breed 3", age: 6, description: "Description 3"),
             Animal(name: "Happy", birthPlace: "Place 4", breed: "Breed 4", age: 8, description: "Description 4")
     ]
+    
+    func getAnimal(with dogID: Int) -> Animal {
+        return self.collection[dogID]
+    }
 }

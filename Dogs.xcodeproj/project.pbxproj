@@ -18,6 +18,7 @@
 		2FCB780C1E437DE300F55503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
 		4FE638161E454D7200CC3215 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE638151E454D7200CC3215 /* Animal.swift */; };
 		4FE6381B1E45666100CC3215 /* AnimalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6381A1E45666100CC3215 /* AnimalCollection.swift */; };
+		4FE753AC1E463E9B00ADADCC /* ImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2F8D784D1E25246D00D75E6A /* DogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE638151E454D7200CC3215 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		4FE6381A1E45666100CC3215 /* AnimalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCollection.swift; sourceTree = "<group>"; };
+		4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				4FE638151E454D7200CC3215 /* Animal.swift */,
 				4FE6381A1E45666100CC3215 /* AnimalCollection.swift */,
+				4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F8D78311E25246C00D75E6A /* ViewController.swift in Sources */,
+				4FE753AC1E463E9B00ADADCC /* ImageCollection.swift in Sources */,
 				2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */,
 				2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */,
 				2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */,
