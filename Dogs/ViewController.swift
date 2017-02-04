@@ -17,13 +17,11 @@ class ViewController: UIViewController {
     
     
     // MARK: - Global Properties
-    let dogArray = [Animal(name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1"),
-                    Animal(name: "Wobbes", birthPlace: "Place 2", breed: "Breed 2", age: 4, description: "Description 2"),
-                    Animal(name: "Wimpie", birthPlace: "Place 3", breed: "Breed 3", age: 6, description: "Description 3"),
-                    Animal(name: "Happy", birthPlace: "Place 4", breed: "Breed 4", age: 8, description: "Description 4")]
+    
 
     let dogImageArray = [#imageLiteral(resourceName: "Chuck"), #imageLiteral(resourceName: "Happy"), #imageLiteral(resourceName: "Wobbes"), #imageLiteral(resourceName: "Wimpie")]
     var dog = Animal()
+    var dogArray = AnimalCollection()
     var image = UIImage()
     var dogCounter = 0
     
@@ -65,7 +63,7 @@ class ViewController: UIViewController {
             dogCounter = 0
         }
         
-        dog = dogArray[dogCounter]
+        dog = dogArray.collection[dogCounter]
         image = dogImageArray[dogCounter]
         
         updateView()
@@ -80,7 +78,7 @@ class ViewController: UIViewController {
         
         dogCounter -= 1
         
-        dog = dogArray[dogCounter]
+        dog = dogArray.collection[dogCounter]
         image = dogImageArray[dogCounter]
         
         updateView()
