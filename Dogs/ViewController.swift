@@ -24,6 +24,16 @@ class ViewController: UIViewController {
     
     var dogImageCollection = ImageCollection()
     var dogCollection = AnimalCollection()
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDogDetail" {
+            let destinationVC = segue.destination as! AnimalViewController
+            destinationVC.currentDog = self.currentDog
+            destinationVC.currentDogImage = currentDogImage
+        }
+    }
 
     
     // MARK: - IBAction
@@ -53,16 +63,6 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDogDetail" {
-            let destinationVC = segue.destination as! AnimalViewController
-            destinationVC.currentDog = self.currentDog
-            destinationVC.currentDogImage = currentDogImage
-        }
     }
     
     
