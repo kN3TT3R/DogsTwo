@@ -6,7 +6,9 @@
 //  Copyright © 2017 kN3TT3R. All rights reserved.
 //
 
+
 import Foundation
+
 
 struct AnimalCollection {
     let collection = [
