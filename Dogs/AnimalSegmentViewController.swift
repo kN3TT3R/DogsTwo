@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AnimalSegmentViewController.swift
 //  Dogs
 //
 //  Created by Kenneth Debruyn on 10/01/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AnimalSegmentViewController: UIViewController {
     
     
     // MARK: - IBOutlets
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDogDetail" {
-            let destinationVC = segue.destination as! AnimalViewController
+            let destinationVC = segue.destination as! AnimalDetailViewController
             destinationVC.currentDog = self.currentDog
             destinationVC.currentDogImage = currentDogImage
         }

@@ -1,5 +1,5 @@
 //
-//  AnimalViewController.swift
+//  AnimalDetailViewController.swift
 //  Dogs
 //
 //  Created by Kenneth Debruyn on 3/02/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimalViewController: UIViewController {
+class AnimalDetailViewController: UIViewController {
 
     
     // MARK: - IBOutlets

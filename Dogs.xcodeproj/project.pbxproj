@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */; };
+		2F207F7D1E448F8E0012C9B9 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F207F7C1E448F8E0012C9B9 /* AnimalDetailViewController.swift */; };
 		2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D782E1E25246C00D75E6A /* AppDelegate.swift */; };
-		2F8D78311E25246C00D75E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D78301E25246C00D75E6A /* ViewController.swift */; };
+		2F8D78311E25246C00D75E6A /* AnimalSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D78301E25246C00D75E6A /* AnimalSegmentViewController.swift */; };
 		2F8D78341E25246C00D75E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D78321E25246C00D75E6A /* Main.storyboard */; };
 		2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D78351E25246D00D75E6A /* Dogs.xcdatamodeld */; };
 		2F8D78391E25246D00D75E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D78381E25246D00D75E6A /* Assets.xcassets */; };
 		2F8D783C1E25246D00D75E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
 		2FCB780B1E437DE200F55503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
 		2FCB780C1E437DE300F55503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D783A1E25246D00D75E6A /* LaunchScreen.storyboard */; };
+		4FE236541E47EDFB00534384 /* AddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE236531E47EDFB00534384 /* AddAnimalViewController.swift */; };
 		4FE638161E454D7200CC3215 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE638151E454D7200CC3215 /* Animal.swift */; };
 		4FE6381B1E45666100CC3215 /* AnimalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6381A1E45666100CC3215 /* AnimalCollection.swift */; };
 		4FE753AC1E463E9B00ADADCC /* ImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */; };
@@ -39,10 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		2F207F7C1E448F8E0012C9B9 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		2F8D782B1E25246C00D75E6A /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8D782E1E25246C00D75E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F8D78301E25246C00D75E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = /Users/knetter/Dropbox/iOS/Projects/DogsDictionary/Dogs/ViewController.swift; sourceTree = "<absolute>"; };
+		2F8D78301E25246C00D75E6A /* AnimalSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalSegmentViewController.swift; path = /Users/knetter/Dropbox/iOS/Projects/DogsDictionary/Dogs/AnimalSegmentViewController.swift; sourceTree = "<absolute>"; };
 		2F8D78331E25246C00D75E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F8D78361E25246D00D75E6A /* Dogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dogs.xcdatamodel; sourceTree = "<group>"; };
 		2F8D78381E25246D00D75E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		2F8D783D1E25246D00D75E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8D78421E25246D00D75E6A /* DogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8D784D1E25246D00D75E6A /* DogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE236531E47EDFB00534384 /* AddAnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalViewController.swift; sourceTree = "<group>"; };
 		4FE638151E454D7200CC3215 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		4FE6381A1E45666100CC3215 /* AnimalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCollection.swift; sourceTree = "<group>"; };
 		4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
@@ -133,8 +135,9 @@
 		4FE638181E45655400CC3215 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2F207F7C1E448F8E0012C9B9 /* AnimalViewController.swift */,
-				2F8D78301E25246C00D75E6A /* ViewController.swift */,
+				2F207F7C1E448F8E0012C9B9 /* AnimalDetailViewController.swift */,
+				2F8D78301E25246C00D75E6A /* AnimalSegmentViewController.swift */,
+				4FE236531E47EDFB00534384 /* AddAnimalViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -285,10 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F8D78311E25246C00D75E6A /* ViewController.swift in Sources */,
+				2F8D78311E25246C00D75E6A /* AnimalSegmentViewController.swift in Sources */,
 				4FE753AC1E463E9B00ADADCC /* ImageCollection.swift in Sources */,
+				4FE236541E47EDFB00534384 /* AddAnimalViewController.swift in Sources */,
 				2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */,
-				2F207F7D1E448F8E0012C9B9 /* AnimalViewController.swift in Sources */,
+				2F207F7D1E448F8E0012C9B9 /* AnimalDetailViewController.swift in Sources */,
 				2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */,
 				4FE638161E454D7200CC3215 /* Animal.swift in Sources */,
 				4FE6381B1E45666100CC3215 /* AnimalCollection.swift in Sources */,
