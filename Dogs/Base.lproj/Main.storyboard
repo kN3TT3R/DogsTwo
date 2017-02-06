@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,11 +97,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ozc-H2-ggj">
-                        <barButtonItem key="rightBarButtonItem" title="More info" id="cEV-wX-N0z">
-                            <connections>
-                                <segue destination="T1b-U7-nsH" kind="show" identifier="showDogDetail" id="suk-U2-V2b"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="More info" id="cEV-wX-N0z">
+                                <connections>
+                                    <segue destination="T1b-U7-nsH" kind="show" identifier="showDogDetail" id="suk-U2-V2b"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Add Dog" id="w9w-ID-FEw"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="dogImageView" destination="9XB-ME-jD1" id="323-lQ-1Te"/>
@@ -115,7 +119,7 @@
         <!--Add Animal-->
         <scene sceneID="yWy-qb-8sL">
             <objects>
-                <viewController id="e2j-Um-7IT" userLabel="Add Animal" sceneMemberID="viewController">
+                <viewController id="e2j-Um-7IT" userLabel="Add Animal" customClass="AddAnimalViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o7H-O0-vw2"/>
                         <viewControllerLayoutGuide type="bottom" id="5Ma-KR-BI0"/>
@@ -132,25 +136,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-GE-FCr">
                                 <rect key="frame" x="16" y="28" width="288" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Name of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCq-ks-R9p">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Name of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCq-ks-R9p" userLabel="pppp">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Birthplace of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-rT-ysQ">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Birthplace of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-rT-ysQ">
                                         <rect key="frame" x="0.0" y="40" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Breed of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-bL-M6g">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Breed of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-bL-M6g">
                                         <rect key="frame" x="0.0" y="80" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Age of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-Ta-ZKY">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Age of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-Ta-ZKY">
                                         <rect key="frame" x="0.0" y="120" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -169,6 +173,12 @@
                             <constraint firstItem="etU-8C-6b0" firstAttribute="leading" secondItem="jyT-jI-Zr6" secondAttribute="leadingMargin" id="rnW-Cc-y5Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dogAgeTextField" destination="7Kf-Ta-ZKY" id="sJk-he-lcy"/>
+                        <outlet property="dogBirthPlaceTextField" destination="pkf-rT-ysQ" id="NhE-4U-Uju"/>
+                        <outlet property="dogBreedTextField" destination="5hs-bL-M6g" id="tyr-yx-opN"/>
+                        <outlet property="dogNameTextField" destination="NCq-ks-R9p" id="7HJ-WI-O5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e75-0Z-Qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

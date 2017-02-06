@@ -10,20 +10,71 @@
 import UIKit
 
 
-class AddAnimalViewController: UIViewController {
+class AddAnimalViewController: UIViewController, UITextFieldDelegate {
 
+    
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var dogNameTextField: UITextField!
+    @IBOutlet weak var dogBirthPlaceTextField: UITextField!
+    @IBOutlet weak var dogBreedTextField: UITextField!
+    @IBOutlet weak var dogAgeTextField: UITextField!
+
+    
+    
+    // MARK: - Properties
+    var newDog = Animal()
+    var newDogImage = UIImage()
+    
+    
+    
+    // MARK: - Overridden Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        dogNameTextField.delegate = self
+        dogBirthPlaceTextField.delegate = self
+        dogBreedTextField.delegate = self
+        dogAgeTextField.delegate = self
     }
     
+    
+    
+    //MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField.tag == 1 {
+            newDog.name = dogNameTextField.text!
+        }
+        if textField.tag == 2 {
+            newDog.birthPlace = dogBirthPlaceTextField.text!
+        }
+        if textField.tag == 3 {
+            newDog.breed = dogBreedTextField.text!
+        }
+        if textField.tag == 4 {
+            newDog.age = Int(dogAgeTextField.text!)!
+        }
+        
+        print("\(newDog.age)")
+    }
+    
+    
+    
+//    // MARK: - IBActions
+//    @IBAction func addDog(_ sender: UIButton) {
+//        
+//    }
 
+    
+    
     /*
     // MARK: - Navigation
 
@@ -35,3 +86,13 @@ class AddAnimalViewController: UIViewController {
     */
 
 }
+
+
+
+
+
+
+
+
+
+

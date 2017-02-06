@@ -6,9 +6,12 @@
 //  Copyright © 2017 kN3TT3R. All rights reserved.
 //
 
+
 import UIKit
 
+
 class AnimalSegmentViewController: UIViewController {
+    
     
     
     // MARK: - IBOutlets
@@ -17,13 +20,15 @@ class AnimalSegmentViewController: UIViewController {
     @IBOutlet weak var selectionBar: UISegmentedControl!
     
     
-    // MARK: - Global Properties
-    var dogID = 0
+    
+    // MARK: - Properties
+    //var dogID = 0
     var currentDog = Animal()
     var currentDogImage = UIImage()
     
     var dogImageCollection = ImageCollection()
     var dogCollection = AnimalCollection()
+    
     
     
     // MARK: - Navigation
@@ -36,6 +41,7 @@ class AnimalSegmentViewController: UIViewController {
     }
 
     
+    
     // MARK: - IBAction
     @IBAction func displayNextDog(_ sender: UIButton) {
         loadNextDog()
@@ -46,11 +52,12 @@ class AnimalSegmentViewController: UIViewController {
     }
     
     @IBAction func selectSpecificDog(_ sender: UISegmentedControl) {
-        dogID = sender.selectedSegmentIndex
+        let dogID = sender.selectedSegmentIndex
         currentDog = dogCollection.getAnimal(with: dogID)
         currentDogImage = dogImageCollection.getImage(with: dogID)
         updateView()
     }
+    
     
     
     // MARK: - Overridden Functions
@@ -64,6 +71,7 @@ class AnimalSegmentViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     
     // MARK: - Homemade Functions
