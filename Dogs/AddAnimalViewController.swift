@@ -23,7 +23,7 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
     
     
     // MARK: - Properties
-    var newDog = Animal()
+    //var newDog = Animal()
     var newDogImage = UIImage()
     
     
@@ -50,20 +50,20 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        if textField.tag == 1 {
-            newDog.name = dogNameTextField.text!
-        }
-        if textField.tag == 2 {
-            newDog.birthPlace = dogBirthPlaceTextField.text!
-        }
-        if textField.tag == 3 {
-            newDog.breed = dogBreedTextField.text!
-        }
-        if textField.tag == 4 {
-            newDog.age = Int(dogAgeTextField.text!)!
-        }
-        
-        print("\(newDog.age)")
+//        if textField.tag == 1 {
+//            newDog.name = dogNameTextField.text!
+//        }
+//        if textField.tag == 2 {
+//            newDog.birthPlace = dogBirthPlaceTextField.text!
+//        }
+//        if textField.tag == 3 {
+//            newDog.breed = dogBreedTextField.text!
+//        }
+//        if textField.tag == 4 {
+//            newDog.age = Int(dogAgeTextField.text!)!
+//        }
+//        
+//        print("\(newDog.age)")
     }
     
     

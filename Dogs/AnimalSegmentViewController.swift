@@ -63,7 +63,8 @@ class AnimalSegmentViewController: UIViewController {
     // MARK: - Overridden Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentDog = Animal(animalID: 0, name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1")
+//        currentDog = Animal(animalID: 0, name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2, description: "Description 1")
+        currentDog = Animal(animalID: 0, name: "Chuck", birthPlace: "Place 1", breed: "Breed 1", age: 2)
         currentDogImage = #imageLiteral(resourceName: "Chuck")
         updateView()
     }
