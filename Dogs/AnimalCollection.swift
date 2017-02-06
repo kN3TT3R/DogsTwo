@@ -24,14 +24,14 @@ struct AnimalCollection {
     ]
     
     func getAnimal(with dogID: Int) -> Animal {
-        return collection[dogID]!
+        return collection[dogID]
     }
     
     func getNextAnimal(for dogID: Int) -> Animal {
         
         var dogID = dogID
         
-        if (collection[dogID]?.animalID == collection.count - 1) {
+        if (collection[dogID].animalID == collection.count - 1) {
             dogID = 0
             return getAnimal(with: dogID)
         } else {
@@ -44,7 +44,7 @@ struct AnimalCollection {
         
         var dogID = dogID
         
-        if (collection[dogID]?.animalID == 0) {
+        if (collection[dogID].animalID == 0) {
             dogID = collection.count - 1
             return getAnimal(with: dogID)
         } else {

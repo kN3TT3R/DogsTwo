@@ -16,13 +16,15 @@ struct Animal {
     
     //MARK: Properties
     
-    var animalID = Int()
-    var name: String
-    var birthPlace: String
-    var breed: String
-    var age: Int
-    var photo: UIImage?
+    var animalID: Int?
+    var name = String()
+    var birthPlace = String()
+    var breed = String()
+    var age = 0
     //var description = String()
+    //var photo: UIImage?
+    //var description = String()
+
     
     
     
@@ -50,7 +52,7 @@ struct Animal {
 
     
     func getAnimalID(for: Animal) -> Int {
-        return (self.animalID)
+        return self.animalID!
     }
     
 }

@@ -14,12 +14,11 @@ class DogTableViewCell: UITableViewCell {
 
     
     //MARK: Properties
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var breedLAbel: UILabel!
+    @IBOutlet weak var dogPhotoImageView: UIImageView!
+    @IBOutlet weak var dogNameLabel: UILabel!
+    @IBOutlet weak var dogBreedLabel: UILabel!
 
-    
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

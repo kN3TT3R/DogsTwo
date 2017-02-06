@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TZX-Ik-lcV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="phO-PC-S8I">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -117,35 +117,35 @@
             </objects>
             <point key="canvasLocation" x="3013" y="-90"/>
         </scene>
-        <!--Dog List-->
+        <!--Animal List-->
         <scene sceneID="0Dz-xI-nwW">
             <objects>
-                <tableViewController title="Dog List" id="TZX-Ik-lcV" customClass="DogTableViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TZX-Ik-lcV" userLabel="Animal List" customClass="DogTableViewController" customModule="Dogs" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FhS-vs-UN4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogTableViewCel" rowHeight="90" id="iJR-0w-l8L" customClass="DogTableViewCell" customModule="Dogs" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogTableViewCel" rowHeight="90" id="iJR-0w-l8L" customClass="DogTableViewCell" customModule="Dogs">
                                 <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJR-0w-l8L" id="NsT-CO-i4I">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="H3i-eH-eut">
                                             <rect key="frame" x="8" y="8" width="73" height="73"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zui-gS-fXi">
-                                            <rect key="frame" x="89" y="8" width="223" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVR-Ak-9mY" userLabel="Breed Label">
+                                            <rect key="frame" x="89" y="46" width="223" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVR-Ak-9mY" userLabel="Breed Label">
-                                            <rect key="frame" x="89" y="46" width="223" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zui-gS-fXi">
+                                            <rect key="frame" x="89" y="8" width="223" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -154,9 +154,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="breedLAbel" destination="cVR-Ak-9mY" id="1Ob-pA-eoO"/>
-                                    <outlet property="nameLabel" destination="zui-gS-fXi" id="QaS-1C-IAT"/>
-                                    <outlet property="photoImageView" destination="H3i-eH-eut" id="V5u-9P-BJn"/>
+                                    <outlet property="dogBreedLabel" destination="cVR-Ak-9mY" id="6QY-9v-HF0"/>
+                                    <outlet property="dogNameLabel" destination="zui-gS-fXi" id="6by-YP-OzN"/>
+                                    <outlet property="dogPhotoImageView" destination="H3i-eH-eut" id="JUw-Rk-PJP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,15 +165,22 @@
                             <outlet property="delegate" destination="TZX-Ik-lcV" id="Tt0-Bh-hOs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="DFV-Tq-9uf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v1p-zd-6Zc">
+                            <connections>
+                                <segue destination="e2j-Um-7IT" kind="presentation" id="nh1-Gh-X3K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9T-BX-WnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3007.5" y="566.19718309859161"/>
+            <point key="canvasLocation" x="3011" y="587"/>
         </scene>
         <!--Add Animal-->
         <scene sceneID="yWy-qb-8sL">
             <objects>
-                <viewController id="e2j-Um-7IT" userLabel="Add Animal" customClass="AddAnimalViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e2j-Um-7IT" userLabel="Add Animal" customClass="AddAnimalViewController" customModule="Dogs" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o7H-O0-vw2"/>
                         <viewControllerLayoutGuide type="bottom" id="5Ma-KR-BI0"/>
@@ -185,7 +192,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-GE-FCr">
                                 <rect key="frame" x="16" y="28" width="288" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Name of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCq-ks-R9p" userLabel="pppp">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 'Name of the Dog'" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCq-ks-R9p">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -232,12 +239,12 @@
                         <outlet property="dogAgeTextField" destination="7Kf-Ta-ZKY" id="sJk-he-lcy"/>
                         <outlet property="dogBirthPlaceTextField" destination="pkf-rT-ysQ" id="NhE-4U-Uju"/>
                         <outlet property="dogBreedTextField" destination="5hs-bL-M6g" id="tyr-yx-opN"/>
-                        <outlet property="dogNameTextField" destination="NCq-ks-R9p" id="7HJ-WI-O5p"/>
+                        <outlet property="dogNameTextField" destination="NCq-ks-R9p" id="O2d-nG-kBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e75-0Z-Qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3727.5" y="565.14084507042253"/>
+            <point key="canvasLocation" x="3728" y="587"/>
         </scene>
         <!--Animal Detail-->
         <scene sceneID="aSw-8a-knh">
@@ -364,6 +371,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJu-ru-5Tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2267" y="-91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UTg-y2-gac">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="phO-PC-S8I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zec-64-2R8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TZX-Ik-lcV" kind="relationship" relationship="rootViewController" id="zcR-na-mGK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CjX-Ox-wXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2267" y="588"/>
         </scene>
     </scenes>
     <resources>
