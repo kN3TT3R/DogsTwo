@@ -6,8 +6,9 @@
 //  Copyright © 2017 kN3TT3R. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
+
 
 struct Animal {
     var animalID: Int?
