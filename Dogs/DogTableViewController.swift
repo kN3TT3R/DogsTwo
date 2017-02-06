@@ -57,6 +57,7 @@ class DogTableViewController: UITableViewController {
         let dogPhoto = dogImageCollection.getImage(with: indexPath.row)
 
         cell.dogNameLabel.text = dog.name
+        cell.dogBreedLabel.text = dog.breed
         cell.dogPhotoImageView.image = dogPhoto
         
         return cell

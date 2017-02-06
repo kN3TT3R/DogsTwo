@@ -20,6 +20,7 @@
 		4FE638161E454D7200CC3215 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE638151E454D7200CC3215 /* Animal.swift */; };
 		4FE6381B1E45666100CC3215 /* AnimalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6381A1E45666100CC3215 /* AnimalCollection.swift */; };
 		4FE753AC1E463E9B00ADADCC /* ImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */; };
+		4FF2211F1E493BAA006E26BA /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2211E1E493BAA006E26BA /* Dog.swift */; };
 		4FF8584C1E48EC8C0051C3FE /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF8584B1E48EC8C0051C3FE /* DogTableViewCell.swift */; };
 		4FF858501E48FBB80051C3FE /* DogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF8584F1E48FBB80051C3FE /* DogTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		4FE638151E454D7200CC3215 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		4FE6381A1E45666100CC3215 /* AnimalCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCollection.swift; sourceTree = "<group>"; };
 		4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
+		4FF2211E1E493BAA006E26BA /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		4FF8584B1E48EC8C0051C3FE /* DogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
 		4FF8584F1E48FBB80051C3FE /* DogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				4FE638151E454D7200CC3215 /* Animal.swift */,
 				4FE6381A1E45666100CC3215 /* AnimalCollection.swift */,
 				4FE753AB1E463E9B00ADADCC /* ImageCollection.swift */,
+				4FF2211E1E493BAA006E26BA /* Dog.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				4FE236541E47EDFB00534384 /* AddAnimalViewController.swift in Sources */,
 				2F8D78371E25246D00D75E6A /* Dogs.xcdatamodeld in Sources */,
 				2F207F7D1E448F8E0012C9B9 /* AnimalDetailViewController.swift in Sources */,
+				4FF2211F1E493BAA006E26BA /* Dog.swift in Sources */,
 				2F8D782F1E25246C00D75E6A /* AppDelegate.swift in Sources */,
 				4FF858501E48FBB80051C3FE /* DogTableViewController.swift in Sources */,
 				4FE638161E454D7200CC3215 /* Animal.swift in Sources */,
