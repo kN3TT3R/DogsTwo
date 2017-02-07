@@ -255,16 +255,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Dog" id="U1p-WD-grm">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="QKL-bc-Hjt"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="NHo-KW-qry"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="NHo-KW-qry">
+                            <connections>
+                                <segue destination="ZED-7o-axo" kind="unwind" unwindAction="unwindToMealListWithSender:" id="qFy-kU-50C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dogAgeTextField" destination="7Kf-Ta-ZKY" id="sJk-he-lcy"/>
                         <outlet property="dogBirthPlaceTextField" destination="pkf-rT-ysQ" id="NhE-4U-Uju"/>
                         <outlet property="dogBreedTextField" destination="5hs-bL-M6g" id="tyr-yx-opN"/>
                         <outlet property="dogNameTextField" destination="NCq-ks-R9p" id="O2d-nG-kBU"/>
+                        <outlet property="dogPhotoImageView" destination="vN4-L0-C49" id="B7r-NO-s1z"/>
+                        <outlet property="saveDogButton" destination="NHo-KW-qry" id="5cR-EK-rzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e75-0Z-Qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZED-7o-axo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4487" y="587"/>
         </scene>

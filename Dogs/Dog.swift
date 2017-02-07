@@ -13,19 +13,13 @@ import UIKit
 class Dog {
     
     // MARK: - Properties
-    var animalID: Int?
-    var name = String()
-    var birthPlace = String()
-    var breed = String()
-    var age = Int()
+    var name: String
+    var birthPlace: String?
+    var breed: String?
+    var age: Int?
     var photo: UIImage?
     
-    init?(animalID: Int?, name: String, birthPlace: String, breed: String, age: Int, photo: UIImage?) {
-        
-        //        // Initialization should fail if there is no name or if the rating is negative.
-        //        if name.isEmpty || rating < 0  {
-        //            return nil
-        //        }
+    init?(name: String, birthPlace: String?, breed: String?, age: Int?, photo: UIImage?) {
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -33,7 +27,6 @@ class Dog {
         }
         
         // Initialize stored properties.
-        self.animalID = animalID
         self.name = name
         self.birthPlace = birthPlace
         self.breed = breed
