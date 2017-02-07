@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Dog_Monitor_icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Icon_original.png",
       "scale" : "2x"
     },
     {
