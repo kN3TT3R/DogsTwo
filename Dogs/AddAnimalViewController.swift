@@ -82,6 +82,9 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
         dogBirthPlaceTextField.delegate = self
         dogBreedTextField.delegate = self
         dogAgeTextField.delegate = self
+        
+        // Enable the Save button only if the text field has a valid Meal name.
+        updateSaveButtonState()
     }
     
     
@@ -93,12 +96,28 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    /*
+        The textFieldDidBeginEditing method gets called when an editing session begins, or when the keyboard 
+        gets displayed. This code disables the Save button while the user is editing the text field.
+     */
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Disable the Save button while editing.
+        saveDogButton.isEnabled = false
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
     
     
     
     //MARK: Navigation
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -109,10 +128,10 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
         }
         
         let name = dogNameTextField.text ?? ""
-        let birthPlace = dogBirthPlaceTextField?.text
-        let breed = dogBreedTextField?.text
-        let age = dogAgeTextField?.text
-        let photo = dogPhotoImageView?.image
+        let birthPlace = dogBirthPlaceTextField.text
+        let breed = dogBreedTextField.text
+        let age = dogAgeTextField.text
+        let photo = dogPhotoImageView.image
         
         // Set the dog to be passed to DogTableViewController after the unwind segue.
         dog = Dog(name: name, birthPlace: birthPlace, breed: breed, age: Int(age!), photo: photo)
@@ -120,8 +139,12 @@ class AddAnimalViewController: UIViewController, UITextFieldDelegate {
     
 
     
-    // MARK: - IBActions
-
+    //MARK: Private Methods
+    private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
+        let text = dogNameTextField.text ?? ""
+        saveDogButton.isEnabled = !text.isEmpty
+    }
 
 }
 

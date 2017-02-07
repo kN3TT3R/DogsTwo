@@ -254,7 +254,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Dog" id="U1p-WD-grm">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="QKL-bc-Hjt"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="QKL-bc-Hjt">
+                            <connections>
+                                <action selector="cancel:" destination="e2j-Um-7IT" id="VFb-3w-Scd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="NHo-KW-qry">
                             <connections>
                                 <segue destination="ZED-7o-axo" kind="unwind" unwindAction="unwindToMealListWithSender:" id="qFy-kU-50C"/>
