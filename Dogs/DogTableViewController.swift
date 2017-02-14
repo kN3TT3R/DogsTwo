@@ -8,7 +8,7 @@
 
 
 /*
-        NEXT STEP -> @IBAction func unwindToMealList(sender: UIStoryboardSegue)
+        NEXT STEP -> @IBAction func unwindToDogList(sender: UIStoryboardSegue)
             The next step in creating the unwind segue is to add an action method to the destination VC
             (the VC that the segue is going to). This method must be marked with the IBAction attribute and
             take a segue (UIStoryboardSegue) as a parameter. Because you want to unwind back to the dog list scene,
@@ -24,13 +24,7 @@ import UIKit
 class DogTableViewController: UITableViewController {
  
     
-    // MARK: - Properties for Animal Struct
-    //var dogImageCollection = ImageCollection()
-    //var dogCollection = AnimalCollection()
-    
-    
     // MARK: - Properties for Dog Class using DogCollection
-    //var dogCollection = DogCollection()
     var dogs = [Dog]()
     
     
@@ -55,8 +49,6 @@ class DogTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return when using DogCollection
-        //return dogCollection.collection.count
         return dogs.count
     }
     
@@ -70,11 +62,7 @@ class DogTableViewController: UITableViewController {
         }
         
         // Fetches the appropriate dog for the data source layout.
-        //let meal = meals[indexPath.row]
         let dog = dogs[indexPath.row]
-        
-        // when using DogCollection
-        //let dog = dogCollection.collection[indexPath.row]
 
         cell.dogNameLabel.text = dog.name
         cell.dogBreedLabel.text = dog.breed
@@ -86,7 +74,7 @@ class DogTableViewController: UITableViewController {
     
     
     // MARK: - IBActions
-    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+    @IBAction func unwindToDogList(sender: UIStoryboardSegue) {
         
         if let sourceViewController = sender.source as? AddAnimalViewController, let dog = sourceViewController.dog {
             
@@ -107,11 +95,6 @@ class DogTableViewController: UITableViewController {
         let photo2 = UIImage(named: "Wobbes")
         let photo3 = UIImage(named: "Wimpie")
         let photo4 = UIImage(named: "Happy")
-        
-        //        Dog(name: "Dog1", birthPlace: "Place 1", breed: "Breed 1", age: 1, photo: #imageLiteral(resourceName: "Chuck")),
-        //        Dog(name: "Dog2", birthPlace: "Place 2", breed: "Breed 2", age: 2, photo: #imageLiteral(resourceName: "Happy")),
-        //        Dog(name: "Dog3", birthPlace: "Place 3", breed: "Breed 3", age: 3, photo: #imageLiteral(resourceName: "Wobbes")),
-        //        Dog(name: "Dog4", birthPlace: "Place 4", breed: "Breed 4", age: 4, photo: #imageLiteral(resourceName: "Wimpie")),
         
         guard let dog1 = Dog(name: "Dog1", birthPlace: "Place 1", breed: "Breed 1", age: 1, photo: photo1) else {
             fatalError("Unable to instantiate dog1")

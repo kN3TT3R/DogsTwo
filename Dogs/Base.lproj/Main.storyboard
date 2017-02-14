@@ -236,11 +236,15 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="vN4-L0-C49">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="vN4-L0-C49">
                                 <rect key="frame" x="30" y="230" width="260" height="260"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vN4-L0-C49" secondAttribute="height" multiplier="1:1" id="C9U-ST-hZn"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mjh-oa-ZrL" appends="YES" id="gm4-Xb-1dH"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.93733808289999998" green="0.93733808289999998" blue="0.93733808289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -261,7 +265,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="NHo-KW-qry">
                             <connections>
-                                <segue destination="ZED-7o-axo" kind="unwind" unwindAction="unwindToMealListWithSender:" id="qFy-kU-50C"/>
+                                <segue destination="ZED-7o-axo" kind="unwind" unwindAction="unwindToDogListWithSender:" id="nNT-FB-LiQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -276,6 +280,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e75-0Z-Qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZED-7o-axo" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Mjh-oa-ZrL">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="e2j-Um-7IT" id="QT5-0I-OCb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4487" y="587"/>
         </scene>
